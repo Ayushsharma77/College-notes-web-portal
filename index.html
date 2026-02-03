@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CollegeNotes Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <div class="logo">
+        <span class="icon">🎓</span> College<span>Notes</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+       <button id="nav-search-btn">🔍 Search</button>
+    </div>
+  </header>
+
+  <section id="home" class="slider-container">
+    <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');">
+      <div class="slide-content">
+        <h1>College Notes Web Portal</h1>
+        <h3>Your Centralized Academic Hub</h3>
+        <button class="btn-primary">Explore Notes</button>
+      </div>
+    </div>
+    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80');">
+      <div class="slide-content">
+        <h1>Ace Your Exams</h1>
+        <h3>Verified Notes by Top Students</h3>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80');">
+      <div class="slide-content">
+        <h1>Share & Collaborate</h1>
+        <h3>Upload Your Own Resources</h3>
+        <button class="btn-primary">Upload Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About This Portal</h2>
+      <h4>Simplifying Academic Resources</h4>
+    </div>
+    <p class="center-text">
+      The College Notes Web Portal is created to help students easily access
+      academic notes, study materials, and resources in one place.
+    </p>
+  </section>
+
+  <section id="features">
+    <div class="section-title">
+      <h2>Key Features</h2>
+      <h4>Why Choose Us?</h4>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">📚</div>
+        <h3>Subject-wise Notes</h3>
+        <p>Arranged subject-wise so students can quickly find what they need.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">🗂</div>
+        <h3>Semester Organized</h3>
+        <p>All study materials are categorized semester-wise for better clarity.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">🔐</div>
+        <h3>Secure Login</h3>
+        <p>Students and admins have separate access with proper authentication.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>Fast Access</h3>
+        <p>Optimized for fast loading and smooth navigation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects" class="tall-section">
+    <div class="section-title">
+      <h2>Available Subjects</h2>
+      <h4>Explore Our Library</h4>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="courseSearch" placeholder="Search for courses (e.g., DBMS)...">
+      <button>Search</button>
+    </div>
+
+    <ul class="subject-list">
+      <li>Database Management Systems (DBMS)</li>
+      <li>Operating Systems</li>
+      <li>Computer Networks</li>
+      <li>Data Structures</li>
+      <li>Full Stack Development</li>
+      <li>Software Engineering</li>
+      <li>Object-Oriented Programming</li>
+      <li>Web Technologies</li>
+    </ul>
+  </section>
+
+  <section id="stats">
+    <div class="section-title">
+      <h2>Portal Statistics</h2>
+      <h4>Growing Every Day</h4>
+    </div>
+    <div class="stats-container">
+      <div class="stat-box">
+        <span class="count" data-count="250">0</span>+
+        <p>Notes Available</p>
+      </div>
+      <div class="stat-box">
+        <span class="count" data-count="500">0</span>+
+        <p>Active Students</p>
+      </div>
+      <div class="stat-box">
+        <span class="count" data-count="15">0</span>+
+        <p>Subjects</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="login-section">
+    <div class="section-title">
+      <h2>Student Login</h2>
+      <h4>Access Your Dashboard</h4>
+    </div>
+    <div class="login-card">
+      <form>
+        <input type="email" placeholder="Student Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn-primary">Login Securely</button>
+      </form>
+      <p class="small-text">Don't have an account? <a href="#">Register here</a></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <h4>Get in Touch</h4>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>📍 Address:</strong> College Campus, India</p>
+        <p><strong>📧 Email:</strong> collegenotes@college.edu</p>
+        <p><strong>📞 Phone:</strong> +91 9XXXXXXXXX</p>
+      </div>
+      
+      <div class="newsletter">
+        <h3>Subscribe to Newsletter</h3>
+        <p>Get updates on new notes and exam schedules.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 College Notes Web Portal</p>
+    <p>Developed as part of Full Stack Development Course</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
