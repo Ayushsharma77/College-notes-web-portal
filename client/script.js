@@ -1,89 +1,60 @@
-/* ================= LOGIN BUTTON ================= */
-function showMsg() {
-  alert("Login functionality will be implemented in the next phase.");
-}
+$(document).ready(function() {
+  
+  // 1. SLIDER LOGIC
+  // This automatically finds all 5 slides and loops them
+  let currentSlide = 0;
+  const slides = $('.slide');
+  const totalSlides = slides.length;
 
-/* ================= SMOOTH SCROLL FOR NAV LINKS ================= */
-const navLinks = document.querySelectorAll("nav a");
+  function showNextSlide() {
+    slides.removeClass('active');
+    currentSlide = (currentSlide + 1) % totalSlides;
+    $(slides[currentSlide]).addClass('active');
+  }
 
-navLinks.forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+  // Change slide every 4 seconds
+  setInterval(showNextSlide, 4000);
 
-    const targetId = this.getAttribute("href");
+  // 2. LIVE COUNTER LOGIC (jQuery)
+  let counterStarted = false;
 
-    if (targetId.startsWith("#")) {
-      const targetSection = document.querySelector(targetId);
+  $(window).scroll(function() {
+    var top_of_element = $('#stats').offset().top;
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: "smooth"
+    if (bottom_of_window > top_of_element && !counterStarted) {
+      counterStarted = true;
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).data('count')
+        }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
         });
-      }
+      });
     }
   });
-});
 
-/* ================= HERO BUTTON ACTION ================= */
-const heroButtons = document.querySelectorAll("#home button");
-
-heroButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelector("#subjects").scrollIntoView({
-      behavior: "smooth"
+  // 3. COURSE SEARCH FUNCTIONALITY
+  $("#courseSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".subject-list li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
+  // 4. SMOOTH SCROLLING FOR MENU
+  $("nav a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800);
+    }
+  });
+
 });
-
-/* ================= ACTIVE NAV LINK ON SCROLL ================= */
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-  let currentSection = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
-      currentSection = "#" + section.getAttribute("id");
-    }
-  });
-
-  navItems.forEach(link => {
-    link.style.color = "#e5e7eb";
-
-    if (link.getAttribute("href") === currentSection) {
-      link.style.color = "#38bdf8";
-    }
-  });
-});
-
-/* ================= SCROLL REVEAL EFFECT ================= */
-const revealElements = document.querySelectorAll("section");
-
-function revealOnScroll() {
-  revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (elementTop < windowHeight - 100) {
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
-      el.style.transition = "all 0.6s ease";
-    } else {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(40px)";
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-/* ================= CONSOLE MESSAGE (PROFESSIONAL TOUCH) ================= */
-console.log("College Notes Web Portal loaded successfully.");
