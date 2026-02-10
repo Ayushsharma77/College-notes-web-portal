@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,13 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
+  <header>
     <div class="logo-container">
       <a href="index.html" class="logo">
-        <span class="icon">🎓</span> 
+        <span class="icon">🎓</span>
         <div class="logo-text">
           College<span class="highlight">Notes</span>
         </div>
@@ -21,21 +23,23 @@
     </div>
 
     <nav class="nav-menu">
-      <a href="#home" class="nav-link">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="#features" class="nav-link">Features</a>
-      <a href="#login-section" class="nav-link">Login</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
+      <a href="search.html" class="nav-link">Search</a>
     </nav>
 
     <div class="header-search">
-       <span class="search-icon">🔍</span>
-       <input type="text" placeholder="Search for notes...">
+
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search for notes...">
     </div>
   </header>
 
   <section id="home" class="slider-container">
-    <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=1171&auto=format&fit=crop');">
+    <div class="slide active"
+      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=1171&auto=format&fit=crop');">
       <div class="slide-content">
         <h1>College Notes Portal</h1>
         <h3>Your Centralized Academic Hub</h3>
@@ -43,7 +47,8 @@
       </div>
     </div>
 
-    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1683417272601-dbbfed0ed718?q=80&w=1176&auto=format&fit=crop');">
+    <div class="slide"
+      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1683417272601-dbbfed0ed718?q=80&w=1176&auto=format&fit=crop');">
       <div class="slide-content">
         <h1>Ace Your Exams</h1>
         <h3>Verified Notes by Top Students</h3>
@@ -51,7 +56,8 @@
       </div>
     </div>
 
-    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1171&auto=format&fit=crop');">
+    <div class="slide"
+      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1171&auto=format&fit=crop');">
       <div class="slide-content">
         <h1>Digital Learning</h1>
         <h3>Access Your Materials Anywhere</h3>
@@ -59,7 +65,8 @@
       </div>
     </div>
 
-    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1683543124524-cbc52e793a02?q=80&w=1171&auto=format&fit=crop');">
+    <div class="slide"
+      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1683543124524-cbc52e793a02?q=80&w=1171&auto=format&fit=crop');">
       <div class="slide-content">
         <h1>Share & Collaborate</h1>
         <h3>Upload Your Own Resources</h3>
@@ -67,21 +74,33 @@
       </div>
     </div>
 
-    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1170&auto=format&fit=crop');">
+    <div class="slide"
+      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1170&auto=format&fit=crop');">
       <div class="slide-content">
         <h1>Campus Community</h1>
         <h3>Connect with Peers</h3>
         <button class="btn-primary">Join Now</button>
       </div>
+
+    </div>
+    <button class="slider-arrow prev">❮</button>
+    <button class="slider-arrow next">❯</button>
+    <div class="slider-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
     </div>
   </section>
+
 
   <section id="features">
     <div class="section-title">
       <h2>Key Features</h2>
       <h4>Why Choose Us?</h4>
     </div>
-    
+
     <div class="features-grid">
       <div class="feature-card">
         <div class="icon">📚</div>
@@ -106,30 +125,6 @@
     </div>
   </section>
 
-<section id="login-section">
-    <div class="login-container">
-      <div class="login-card">
-        <div class="login-header">
-          <h2>Student Login</h2>
-          <p>Please enter your details to sign in.</p>
-        </div>
-
-        <form>
-          <div class="input-group">
-            <label>Email Address</label>
-            <input type="email" required> </div>
-          
-          <div class="input-group">
-            <label>Password</label>
-            <input type="password" required> </div>
-
-          <button type="submit" class="btn-primary btn-full">Sign In</button>
-        </form>
-
-        <p class="small-text">New here? <a href="#">Create an account</a></p>
-      </div>
-    </div>
-  </section>
   <section id="about">
     <div class="section-title">
       <h2>About This Portal</h2>
@@ -140,66 +135,64 @@
       academic notes, study materials, and resources in one place.
     </p>
   </section>
-
-  <section id="subjects">
-    <div class="section-title">
-      <h2>Available Subjects</h2>
-      <h4>Explore Our Library</h4>
-    </div>
-    <div class="search-container">
-      <input type="text" id="courseSearch" placeholder="Search for courses (e.g., DBMS)...">
-      <button>Search</button>
-    </div>
-    <ul class="subject-list">
-      <li>Database Management Systems</li>
-      <li>Operating Systems</li>
-      <li>Computer Networks</li>
-      <li>Data Structures & Algorithms</li>
-      <li>Full Stack Development</li>
-      <li>Software Engineering</li>
-      <li>Object-Oriented Programming</li>
-      <li>Web Technologies</li>
-      <li>Artificial Intelligence</li>
-      <li>Machine Learning</li>
-      <li>Digital Electronics</li>
-      <li>Discrete Mathematics</li>
-      <li>Cloud Computing</li>
-      <li>Cyber Security</li>
-      <li>Mobile App Development</li>
-      <li>Computer Graphics</li>
-    </ul>
-  </section>
-
   <section id="stats">
     <div class="section-title">
       <h2>Portal Statistics</h2>
       <h4>Growing Every Day</h4>
     </div>
-    <div class="stats-container">
-      <div class="stat-box">
-        <span class="count" data-count="250">0</span>+
-        <p>Notes Available</p>
-      </div>
-      <div class="stat-box">
-        <span class="count" data-count="500">0</span>+
-        <p>Active Students</p>
-      </div>
-      <div class="stat-box">
-        <span class="count" data-count="20">0</span>+
-        <p>Subjects</p>
+  </section>
+  <div class="stats-container">
+    <div class="stat-box">
+      <span class="count" data-count="250">0</span>+
+      <p>Notes Available</p>
+    </div>
+    <div class="stat-box">
+      <span class="count" data-count="500">0</span>+
+      <p>Active Students</p>
+    </div>
+    <div class="stat-box">
+      <span class="count" data-count="20">0</span>+
+      <p>Subjects</p>
+    </div>
+  </div>
+  </section>
+  <section id="login-section">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <h2>Student Login</h2>
+          <p>Please enter your details to sign in.</p>
+        </div>
+
+        <form>
+          <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" required>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" required>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Sign In</button>
+        </form>
+
+        <p class="small-text">New here? <a href="#">Create an account</a></p>
       </div>
     </div>
   </section>
+
 
   <section id="contact">
     <div class="section-title">
       <h2>Contact & Support</h2>
       <h4>We are here to help</h4>
     </div>
-    
+
     <div class="contact-grid">
       <div class="contact-info">
-        <p><strong>📍 Visit Us:</strong> College Campus, Main Block</p>
+        <p><strong>📍 Visit Us:</strong> SKIT Campus, CS Block</p>
         <p><strong>📧 Email:</strong> support@collegenotes.edu</p>
         <p><strong>📞 Admin:</strong> +91 9XXXXXXXXX</p>
         <p style="margin-top: 20px; color: #64748b; font-size: 14px;">
@@ -221,7 +214,7 @@
 
   <footer>
     <div class="footer-content">
-      
+
       <div class="footer-left">
         <p>&copy; 2026 CollegeNotes. All rights reserved.</p>
       </div>
@@ -241,4 +234,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
