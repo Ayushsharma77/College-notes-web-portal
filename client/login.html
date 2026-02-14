@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeNotes Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <span class="icon">🎓</span>
+                <div class="logo-text">
+                    College<span class="highlight">Notes</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="search.html" class="nav-link">Search</a>
+            <a href="login.html" class="nav-link">Login</a>
+        </nav>
+
+        <div class="header-search">
+
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search for notes...">
+        </div>
+    </header>
+
+    <section id="login-section">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2>Student Login</h2>
+                    <p>Please enter your details to sign in.</p>
+                </div>
+
+                <form>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-full">Sign In</button>
+                </form>
+
+                <p class="small-text">New here? <a href="#">Create an account</a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contact & Support</h2>
+            <h4>We are here to help</h4>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📍 Visit Us:</strong> SKIT Campus, CS Block</p>
+                <p><strong>📧 Email:</strong> support@collegenotes.edu</p>
+                <p><strong>📞 Admin:</strong> +91 9XXXXXXXXX</p>
+                <p style="margin-top: 20px; color: #64748b; font-size: 14px;">
+                    Built for students, by students. Open source and free to use.
+                </p>
+            </div>
+
+            <div class="request-box">
+                <h3>Request Missing Notes</h3>
+                <p>Can't find what you are looking for? Tell us the subject or topic, and we will upload it within 24
+                    hours.</p>
+                <form class="request-form">
+                    <input type="text" placeholder="e.g. Applied Physics, Sem 2...">
+                    <button type="button">Send Request</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-left">
+                <p>&copy; 2026 CollegeNotes. All rights reserved.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <span class="separator">|</span>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

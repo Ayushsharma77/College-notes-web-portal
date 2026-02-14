@@ -292,13 +292,19 @@ nav a:hover {
   cursor: pointer;
   z-index: 15;
   border-radius: 4px;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
+  /* Hidden by default */
   transition: all 0.3s ease;
 }
 
 /* Position them on sides */
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
 
 /* Show arrows when hovering over the container */
 .slider-container:hover .slider-arrow {
@@ -307,7 +313,8 @@ nav a:hover {
 }
 
 .slider-arrow:hover {
-  background: #38bdf8 !important; /* Brand blue on direct hover */
+  background: #38bdf8 !important;
+  /* Brand blue on direct hover */
   color: #0f172a;
 }
 
@@ -484,30 +491,26 @@ section:nth-child(even) {
 
 
 /* ================= LOGIN SECTION (MINIMALIST) ================= */
-#login-section {
-  background-color: #0f172a;
-  /* Solid Matte Dark (Matches Header) */
-  padding: 120px 20px;
-  /* Generous spacing top/bottom */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Removed the glowing pseudo-element completely */
 
 .login-container {
   width: 100%;
   max-width: 380px;
-  /* Slightly narrower for a tighter look */
+}
+
+#login-section {
+  padding: 120px 20px;
+  background: #f8fafc;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
 }
 
 .login-card {
   background: #ffffff;
   padding: 40px;
   border-radius: 12px;
-  /* Clean, modern radius (not too round) */
-  /* A very subtle, realistic drop shadow (adds depth without "glow") */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: left;
 }
@@ -519,12 +522,10 @@ section:nth-child(even) {
 
 .login-header h2 {
   font-size: 24px;
-  /* Refined size */
   color: #1e293b;
   font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: -0.5px;
-  /* Tight tracking = Premium feel */
 }
 
 .login-header p {
@@ -535,7 +536,6 @@ section:nth-child(even) {
 /* INPUTS */
 .input-group {
   margin-bottom: 24px;
-  /* More breathing room between inputs */
 }
 
 .input-group label {
@@ -560,13 +560,11 @@ section:nth-child(even) {
   transition: all 0.2s ease;
 }
 
-/* Focus State: Clean Blue Border (No Glow) */
 .input-group input:focus {
   border-color: #38bdf8;
   outline: none;
 }
 
-/* BUTTON */
 .btn-full {
   width: 100%;
   padding: 12px;
@@ -575,7 +573,6 @@ section:nth-child(even) {
   font-weight: 600;
   margin-top: 10px;
   box-shadow: none;
-  /* Flat design */
 }
 
 .small-text {
@@ -586,18 +583,7 @@ section:nth-child(even) {
 }
 
 /* 3. The Card (Crisp White Pop) */
-.login-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 24px;
-  /* Modern soft corners */
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.3),
-    0 10px 10px -5px rgba(0, 0, 0, 0.2);
-  /* Deep detailed shadow */
-  text-align: left;
-  /* Professional alignment */
-}
+
 
 /* Header Text */
 .login-header {
@@ -636,7 +622,6 @@ section:nth-child(even) {
   width: 100%;
   padding: 12px 16px;
   background-color: #f1f5f9;
-  /* Light gray bg */
   border: 2px solid transparent;
   border-radius: 8px;
   font-size: 16px;
@@ -647,7 +632,6 @@ section:nth-child(even) {
 .input-group input:focus {
   background-color: #ffffff;
   border-color: #38bdf8;
-  /* Brand blue focus */
   outline: none;
   box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
 }
@@ -659,7 +643,6 @@ section:nth-child(even) {
   padding: 14px;
   font-size: 16px;
   box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.3);
-  /* Glowy button */
 }
 
 .small-text {
@@ -719,7 +702,6 @@ section:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 60px;
-  /* Increased gap for cleaner look */
   max-width: 1000px;
   margin: 0 auto;
   align-items: start;
@@ -737,7 +719,6 @@ section:nth-child(even) {
 /* The New Request Box */
 .request-box {
   background: #f8fafc;
-  /* Very light gray */
   padding: 35px;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
@@ -799,13 +780,10 @@ section:nth-child(even) {
 /* ================= FOOTER (PROFESSIONAL) ================= */
 footer {
   background-color: #0f172a;
-  /* Matches your dark header */
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  /* Subtle separator line */
   padding: 30px 40px;
   font-size: 14px;
   color: #94a3b8;
-  /* Muted slate text (not harsh white) */
 }
 
 .footer-content {
@@ -813,10 +791,8 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* Pushes left and right apart */
   align-items: center;
   flex-wrap: wrap;
-  /* responsive safety */
   gap: 20px;
 }
 
